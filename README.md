@@ -67,5 +67,18 @@ A kész adatszerkezet:
   ]
 ```
 
+# 3 get, file system
+- branch: `03_Get_FileSystem`
+Ezt valósítottuk meg:
+```rest
+### get products
+get http://localhost:3000/products/
+
+### get product by id
+get http://localhost:3000/products/apcj6tclbfhqungx
+```
+
+
+
 
 
