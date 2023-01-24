@@ -85,6 +85,36 @@ app.delete("/products/:id", function (req, res) {
   });
 });
 
+
+app.put("/products/:id", (req, res) => {
+    const id = req.params.id;
+    fs.readFile(dataFile,(error, data)=>{
+        const products = JSON.parse(data);
+        const productIndexById = products.findIndex(product => product.id == id);
+        if (productIndexById === -1) {
+            let message = {
+                error: `id: ${id} not found`
+            }
+            res.status(404);
+            res.send(message);
+            // res.send(JSON.stringify(message));
+            return;
+        }
+        const updatedProduct = {
+            id: id,
+            name: req.body.name,
+            quantity: Number(req.body.quantity),
+            price: Number(req.body.price),
+            type: req.body.type,
+          };
+        products[productIndexById] = updatedProduct;
+        fs.writeFile(dataFile, JSON.stringify(products), (error, data)=>{
+            res.send(updatedProduct);
+        });
+        
+    });
+});
+
 app.listen(port, () => {
   console.log(`Express server ok. port: ${port}`);
 });
