@@ -40,6 +40,32 @@ product = {
     "type": "string"
 }
 ```
+A kész adatszerkezet:
+```json
+[
+    {
+      "id": "apcj6tclbfhqung",
+      "name": "Á22",
+      "quantity": 24,
+      "price": 2500,
+      "type": "tejtermék"
+    },
+    {
+      "id": "apcjbuglbfhs62f",
+      "name": "Á2",
+      "quantity": 24,
+      "price": 2500,
+      "type": "tejtermék"
+    },
+    {
+      "id": "apcj1q8lbfnah5m",
+      "name": "Á1",
+      "quantity": 24,
+      "price": 2500,
+      "type": "tejtermék"
+    }
+  ]
+```
 
 
 
