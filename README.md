@@ -5,9 +5,9 @@
 
 ## Telepítendő modulok
 
-- `npm i --save express`  
-- `npm install sanitize-html` 
-- `npm install uniqid`
+- szerver: `npm i --save express`  
+- XSS védelem: `npm install sanitize-html` 
+- egyedi azonosító (id): `npm install uniqid`
 
 Telepítés egyszerre:
 - `npm i express sanitize-html uniqid`

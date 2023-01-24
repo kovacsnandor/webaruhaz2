@@ -2,5 +2,16 @@
 get http://localhost:3000/products/
 
 ### get product by id
-get http://localhost:3000/products/apcj6tclbfhqungx
+get http://localhost:3000/products/apcj6tclbfhqung
+
+### post product
+post http://localhost:3000/products/
+Content-Type: application/json
+
+{
+    "name": "Á6",
+    "quantity": 66,
+    "price": 6500,
+    "type": "fémáru"
+}
 
