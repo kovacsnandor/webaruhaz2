@@ -19,12 +19,5 @@
     "quantity": 24,
     "price": 2500,
     "type": "tejtermék"
-  },
-  {
-    "id": "1lvc09nklda2emq5",
-    "name": "Á6",
-    "quantity": 66,
-    "price": 6500,
-    "type": "fémáru"
   }
 ]

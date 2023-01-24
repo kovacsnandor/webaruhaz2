@@ -15,3 +15,6 @@ Content-Type: application/json
     "type": "fémáru"
 }
 
+### delete product by id
+delete http://localhost:3000/products/1lvc09nklda2emq5
+

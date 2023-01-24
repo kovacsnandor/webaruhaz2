@@ -36,27 +36,53 @@ app.get("/products/:id", function (req, res) {
 });
 
 app.post("/products", function (req, res) {
-    const body = req.body;
+  const body = req.body;
 
-    const newProduct = {
-        id: uniqid(),
-        name: body.name,
-        quantity: body.quantity,
-        price: body.price,
-        type: body.type
+  const newProduct = {
+    id: uniqid(),
+    name: body.name,
+    quantity: body.quantity,
+    price: body.price,
+    type: body.type,
+  };
+
+  fs.readFile(dataFile, (error, data) => {
+    //json -> objektum lista
+    let products = JSON.parse(data);
+    products.push(newProduct);
+    //objektumlista -> json
+    products = JSON.stringify(products);
+    console.log(products);
+    fs.writeFile(dataFile, products, (error) => {
+      res.send(newProduct);
+    });
+  });
+});
+
+app.delete("/products/:id", function (req, res) {
+  const id = req.params.id;
+
+  fs.readFile(dataFile, (error, data) => {
+    let products = JSON.parse(data);
+    //megkeressük
+    const productIndexById = products.findIndex((product) => product.id === id);
+    if (productIndexById === -1) {
+      let message = {
+        error: `not founc id: ${id}`,
+      };
+      res.status(404);
+      res.send(message);
+      return;
     }
 
-    fs.readFile(dataFile, (error, data) => {
-        //json -> objektum lista
-        let products = JSON.parse(data);
-        products.push(newProduct);
-        //objektumlista -> json
-        products = JSON.stringify(products);
-        console.log(products);
-        fs.writeFile(dataFile, products, (error) => {
-            res.send(newProduct);
-        });
+    //törli amit kell
+    products.splice(productIndexById, 1);
+    //visszaírjuk
+    products = JSON.stringify(products);
+    fs.writeFile(dataFile, products, (error) => {
+      res.send({ id: id });
     });
+  });
 });
 
 app.listen(port, () => {
