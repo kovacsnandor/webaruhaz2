@@ -9,22 +9,22 @@ post http://localhost:3000/products/
 Content-Type: application/json
 
 {
-    "name": "Á6",
+    "name": "Á7",
     "quantity": 66,
     "price": 6500,
     "type": "fémáru"
 }
 
 ### delete product by id
-delete http://localhost:3000/products/1lvc09nklda2emq5
+delete http://localhost:3000/products/1lvc06wcldbc5e2j
 
 
 ### put product by id
-put http://localhost:3000/products/apcj1q8lbfnah5m
+put http://localhost:3000/products/1lvc06wcldbc5e2j
 Content-Type: application/json
 
 {
-    "name": "Á9",
+    "name": "Á77",
     "quantity": 99,
     "price": 9500,
     "type": "fémáru9"
