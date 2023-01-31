@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
-let port = 3000;
+let port = 8080;
 const fs = require("fs");
 const path = require("path")
 const uniqid = require("uniqid");
-const cors = require("cors")
 
 const dataFile = "./data/products.json";
 
@@ -12,15 +11,6 @@ const dataFile = "./data/products.json";
 app.use(express.json());
 //statikus tartalmak kiszolgálása
 app.use('/public', express.static('public'));
-
-const corsConf = {
-  "origin": ["http://127.0.0.1:5500", "http://localhost:8080"],
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
-}
-
-app.use(cors(corsConf));
 
 //get home
 app.get('/', function(req, res){
