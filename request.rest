@@ -16,8 +16,8 @@ post http://localhost:3000/products/
 Content-Type: application/json
 
 {
-    "name": "Á7",
-    "quantity": 66,
+    "name": "Á7 <span onclick='x()'>Alma<script>function x(){alert('Betörtem XD')}</script></span>",
+    "quantity": "66 <script>function x(){alert('Betörtem XD')}</script>",
     "price": 6500,
     "type": "fémáru"
 }

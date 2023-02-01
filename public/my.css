@@ -1,3 +1,15 @@
 body {
-    /* background-color: bl; */
+    /* background-color: black; */
+}
+
+h1{
+    color:gold;
+}
+
+#alertOk {
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    z-index: 7000;
 }

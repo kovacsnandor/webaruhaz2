@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path")
 const uniqid = require("uniqid");
 const cors = require("cors")
+const sanitizerHtml = require("sanitize-html")
 
 const dataFile = "./data/products.json";
 
@@ -32,7 +33,6 @@ app.get('/post', function(req, res){
   res.sendFile(path.join(__dirname, "./frontend/post.html"));
 })
 
-
 app.get("/products", function (req, res) {
   fs.readFile(dataFile, (error, data) => {
     let products = JSON.parse(data);
@@ -42,7 +42,6 @@ app.get("/products", function (req, res) {
 
 app.get("/products/:id", function (req, res) {
   const id = req.params.id;
-  console.log(id);
   fs.readFile(dataFile, (error, data) => {
     let products = JSON.parse(data);
     const productById = products.find((product) => product.id === id);
@@ -64,10 +63,10 @@ app.post("/products", function (req, res) {
 
   const newProduct = {
     id: uniqid(),
-    name: body.name,
-    quantity: body.quantity,
-    price: body.price,
-    type: body.type,
+    name: sanitizerHtml(body.name),
+    quantity: +sanitizerHtml(body.quantity),
+    price: +sanitizerHtml(body.price),
+    type: sanitizerHtml(body.type)
   };
 
   fs.readFile(dataFile, (error, data) => {
@@ -76,7 +75,6 @@ app.post("/products", function (req, res) {
     products.push(newProduct);
     //objektumlista -> json
     products = JSON.stringify(products);
-    console.log(products);
     fs.writeFile(dataFile, products, (error) => {
       res.send(newProduct);
     });
@@ -125,12 +123,12 @@ app.put("/products/:id", (req, res) => {
             return;
         }
         const updatedProduct = {
-            id: id,
-            name: req.body.name,
-            quantity: Number(req.body.quantity),
-            price: Number(req.body.price),
-            type: req.body.type,
-          };
+          id: uniqid(),
+          name: sanitizerHtml(body.name),
+          quantity: +sanitizerHtml(body.quantity),
+          price: +sanitizerHtml(body.price),
+          type: sanitizerHtml(body.type)
+        }
         products[productIndexById] = updatedProduct;
         fs.writeFile(dataFile, JSON.stringify(products), (error, data)=>{
             res.send(updatedProduct);

@@ -1,7 +1,7 @@
 [
     {
         "id": "apcj6tclbfhqung",
-        "name": "Á22",
+        "name": "Á22 ",
         "quantity": 24,
         "price": 2500,
         "type": "tejtermék"
@@ -18,13 +18,6 @@
         "name": "Á9",
         "quantity": 99,
         "price": 9500,
-        "type": "fémáru9"
-    },
-    {
-        "id": "1lvc01ucldbfopft",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
         "type": "fémáru"
     },
     {
@@ -42,108 +35,17 @@
         "type": "fémáru"
     },
     {
-        "id": "54n0k4awldjwjqzv",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
+        "id": "54n0kaqoldleamwd",
+        "name": "<span>Alma</span>",
+        "quantity": 40,
+        "price": 30,
+        "type": "gyümi"
     },
     {
-        "id": "54n0k9t0ldjwjski",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k8fgldjwjt6e",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k3zsldjwk9e8",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k46gldjwzklq",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0kau4ldjx40yw",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k43wldjx41mu",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k71cldjx7kiv",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0kl8ldjx7mzg",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k70sldjx7nni",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k900ldjx7t0m",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0kap8ldjx7uge",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k1qgldjxaxh4",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k75gldjxb14y",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
-    },
-    {
-        "id": "54n0k39gldjxb3oi",
-        "name": "Á10",
-        "quantity": 99,
-        "price": 6500,
-        "type": "fémáru"
+        "id": "54n0k2dsldledzpt",
+        "name": "<a href=\"https://hu.wikipedia.org/wiki/Aladin\">Alma</a>",
+        "quantity": 123,
+        "price": 41,
+        "type": "fa"
     }
 ]
